@@ -1,0 +1,7 @@
+.idea
+docs/target
+gatling/target
+logs
+project/project/target
+project/target
+target
