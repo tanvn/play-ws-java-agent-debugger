@@ -1,4 +1,4 @@
-## How to reproduce the Exeception
+## How to reproduce the Exception
 
 1. Run `./sbt dist`
 2. Go to `./target/universal/` then execute `unzip play-ws-java-agent-debugger-1.0-SNAPSHOT.zip`
