@@ -15,7 +15,7 @@ class PlayWsTestController @Inject() (
     val controllerComponents: ControllerComponents
 ) extends BaseController {
 
-  def get(): Action[AnyContent] = Action { implicit req =>
+  def get(): Action[AnyContent] = Action.async { implicit req =>
     import play.shaded.ahc.org.asynchttpclient._
 
     implicit val system: ActorSystem = ActorSystem()
@@ -42,8 +42,7 @@ class PlayWsTestController @Inject() (
           .flatMap(_.toOption)
           .getOrElse(ContentTypes.`application/octet-stream`)
         Future(())
-
       }
-    Ok("you made it!")
+      .map(_ => Ok("you made it!"))
   }
 }
