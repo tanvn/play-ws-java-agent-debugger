@@ -15,8 +15,7 @@ class PlayWsTestController @Inject() (
 ) extends BaseController {
 
   def get(): Action[AnyContent] = Action.async { implicit req =>
-    val imageUrl =
-      "https://vastphotos.com/files/uploads/photos/10245/milky-way-astrophotography-l.jpg"
+    val imageUrl = "https://upload.wikimedia.org/wikipedia/commons/9/9a/Gull_portrait_ca_usa.jpg"
     wsClient
       .url(imageUrl)
       .withMethod("GET")

@@ -16,8 +16,8 @@ lazy val root = (project in file("."))
       "io.lemonlabs" %% "scala-uri" % "1.5.1",
       "net.codingwell" %% "scala-guice" % "4.2.6",
       "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test,
-      "com.datadoghq" % "dd-java-agent" % "0.41.0",
-      "com.datadoghq" % "dd-trace-api" % "0.41.0",
+//      "com.datadoghq" % "dd-java-agent" % "0.41.0",
+//      "com.datadoghq" % "dd-trace-api" % "0.41.0",
       "com.typesafe.play" %% "play-ahc-ws-standalone" % "2.0.8",
       "com.typesafe.play" %% "play-ws-standalone-json" % "2.0.8",
     ),
@@ -27,7 +27,7 @@ lazy val root = (project in file("."))
       "-Xfatal-warnings"
     )
   ).settings(
-  javaAgents += "com.datadoghq" % "dd-java-agent" % "0.41.0"
+  javaAgents += "com.datadoghq" % "dd-java-agent" % "0.46.0"
 )
 
 lazy val gatlingVersion = "3.3.1"
